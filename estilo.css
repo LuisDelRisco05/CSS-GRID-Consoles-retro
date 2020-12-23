@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+	background-image: url(imagenes/fondo-retro.jpg);
+	background-size: 80% 50%;
+	font-family: 'Josefin Sans', sans-serif;
+  }
+main.content {
+	  border-radius: 5px;
+}
+.consola{
+    height: 120px;
+	width: 250px;
+	margin-top: 20px;
+	padding: 5px;
+}
+.title h1{
+	width: 25%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 5px 0;
+	font-size: 2.9em;
+	color: black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-radius: 5px;
+	animation-name: colores;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.container{
+	background-color: lightblue;
+	width: 90%;
+	max-width: 1000px;
+	margin: 1.6em auto;
+	display: grid;
+	gap: 1.6em;
+	grid-template-columns: repeat(5,1fr);
+	
+}
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+	background-color: white;
+	padding: 20px;
+	border: 1px solid black;
+}
+.container .header,
+.container .footer {
+	grid-column: span 6;
+	color: white;
+	animation-name: colores;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+.container .content {
+	grid-column: span 3;
+}
+.content .article {
+	padding: 20px;
+	margin-top: 5px;
+	color: white;
+	border-radius: 5px;
+	line-height: 20px;
+}
+.play{
+	background-color: darkblue;
+	color: white;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+.nintendo {
+	background-color: rgb(168, 4, 4);
+	color: white;
+	margin-bottom: 15px;
+}
+.xbox {
+	background-color: rgb(2, 78, 2);
+	color: white;
+}
+.play:hover,
+.nintendo:hover,
+.xbox:hover {
+	transform: scale(1.1)
+}
+.container .sidebar {
+	grid-column: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.container .related-post {
+	grid-column: span 2;
+    background: #2d3436;
+	color: #ffffff;
+	width: 60%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container > .related-post:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+@keyframes colores {
+	0%{
+		background: darkblue;
+	}
+	50%{
+		background: rgb(168, 4, 4);
+	}	
+	100%{
+		background: rgb(2, 78, 2);
+	} 
+}
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+    .container .content {
+        grid-column: 1 / -1;
+    }
+    .container .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    .container .related-post {
+        grid-column: 1/-1;
+    }
+}
