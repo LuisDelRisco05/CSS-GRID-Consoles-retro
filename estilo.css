@@ -5,6 +5,7 @@
 body {
 	background-image: url(imagenes/fondo-retro.jpg);
 	background-size: 80% 50%;
+	background-repeat:inherit;
 	font-family: 'Josefin Sans', sans-serif;
   }
 main.content {
@@ -124,7 +125,7 @@ main.content {
 		background: rgb(2, 78, 2);
 	} 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .header {
         text-align: center;
     }
