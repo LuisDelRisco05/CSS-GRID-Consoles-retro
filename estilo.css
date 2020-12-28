@@ -9,7 +9,7 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
   }
 main.content {
-	  border-radius: 5px;
+	  border-radius: 10px;
 }
 .consola{
     height: 120px;
@@ -67,7 +67,6 @@ main.content {
 	padding: 20px;
 	margin-top: 5px;
 	color: white;
-	border-radius: 5px;
 	line-height: 20px;
 }
 .play{
@@ -96,17 +95,19 @@ main.content {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border-radius: 10px;
 }
 .container .related-post {
-	grid-column: span 2;
+	grid-column: span 3;
     background: #2d3436;
 	color: #ffffff;
-	width: 60%;
+	width: 80%;
     height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	margin-left: 20px;
 }
 
 .container > .related-post:hover {
